@@ -7,6 +7,7 @@ Website: http://www.easydarwin.org
 #ifndef __EASY_PROCESS_H__
 #define __EASY_PROCESS_H__
 
+#include "EasyFFmpeg.h"
 #include "EasyAIFilterAPI.h"
 #include <string>
 #include "EasyQueue.h"
@@ -39,14 +40,31 @@ public:
 		}
 	}
 
+	AVPacket* Transcode(char* srcData, int srcSize);
+
 	int SendData(EASY_AV_Frame* frame);
 
+private:
+	int Init();
+	int initDecodecContext();
+	int initEncodeContext();
+	int initFilter(AVCodecContext * codecContext);
+	AVFrame* decode(AVPacket* packet);
+	AVPacket *encode(AVFrame *filterFrame);
 public:
 	EasyQueue				pQueueObj_;
 	int						threadFlag_;
+	AVCodecContext*			encodeContext_;
 
 private:
 	EASY_DATA_INFO_T		mediaInfo_;
+	AVCodecID				videoCodecId_;
+	AVFilterContext*		buffersinkCtx_;
+	AVFilterContext*		buffersrcCtx_;
+	AVFilterGraph*			filterGraph_;
+	AVFilterInOut*			outputs_;
+	AVFilterInOut*			inputs_;
+	AVCodecContext*			decodeContext_;
 	EasyAIFilterCallBack	callback_;
 	bool					getFirstKeyFrame_;
 #ifdef _WIN32

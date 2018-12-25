@@ -29,6 +29,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EasyFFmpeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="EasyTypes.h">
       <Filter>头文件</Filter>
     </ClInclude>

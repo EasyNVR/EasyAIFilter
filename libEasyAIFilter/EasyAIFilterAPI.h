@@ -14,7 +14,7 @@ typedef int (Easy_APICALL *EasyAIFilterCallBack)(void* userPtr, EASY_AV_Frame* f
 
 typedef struct __EASY_DATA_INFO_T
 {
-	void*	 pUserPtr;		/*user ptr, shouldn't modify it*/
+	void*	 pUserPtr;		/*pUserPtr, shouldn't modify it*/
 	Easy_U32 u32ChannelID;	/*The Channel ID in EasyNVR channel config*/
 	Easy_U32 u32VideoCodec;	
 	Easy_U32 u32Width;
