@@ -29,6 +29,9 @@ EasyAIFilter是由[EasyNVR](http://www.easynvr.com "www.easynvr.com")团队开�
 		cmake -DCMAKE_BUILD_TYPE=Release ..
 		make
 
+## 示例 ##
+OverlayDemo 为一个使用示例，为视频叠加字幕，仅供参考。
+
 ## 技术支持 ##
 
 - 邮件：[support@easynvr.com](mailto:support@easynvr.com) 
