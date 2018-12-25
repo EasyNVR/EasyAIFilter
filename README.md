@@ -4,7 +4,11 @@ EasyAIFilter是由[EasyNVR](http://www.easynvr.com "www.easynvr.com")团队开�
 
 **使用场景**：适合需要提供互联网无插件直播，同时需要进行视频分析处理的场景，如人脸识别、智慧工地、烟雾/火灾报警等
 
-## 调用示例 ##
+## 示例 ##
+master分支 为filter主结构，用户可以在EasyProcess.cpp中Run函数里处理数据。
+OverlayDemo分支 为一个使用示例，为视频叠加字幕，仅供参考。
+
+## 接口说明 ##
 
 - 用户不可以修改EasyAIFilter.h中提供的接口函数和回调函数。
 
@@ -28,9 +32,6 @@ EasyAIFilter是由[EasyNVR](http://www.easynvr.com "www.easynvr.com")团队开�
 		cd build
 		cmake -DCMAKE_BUILD_TYPE=Release ..
 		make
-
-## 示例 ##
-OverlayDemo 为一个使用示例，为视频叠加字幕，仅供参考。
 
 ## 技术支持 ##
 
