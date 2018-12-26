@@ -1,6 +1,6 @@
 # EasyAIFilter #
 
-EasyAIFilter是由[EasyNVR](http://www.easynvr.com "www.easynvr.com")团队开发和运维的一款功能组件，安照既有的API模板，用户可以获取到EasyNVR中原始音视频数据，可以作自定义的处理、分析、修改等操作，并将处理之后的数据回调回去，EasyNVR可以直播和录像的数据就是自定义处理后的数据。
+EasyAIFilter是由[EasyNVR](http://www.easynvr.com "www.easynvr.com")团队开发和运维的一款功能组件，按照既有的API模板，用户可以获取到EasyNVR中原始音视频数据，可以作自定义的处理、分析、修改等操作，并将处理之后的数据回调回去，EasyNVR直播和录像的数据就是自定义处理后的数据。
 
 **使用场景**：适合需要提供互联网无插件直播，同时需要进行视频分析处理的场景，如人脸识别、智慧工地、烟雾/火灾报警等
 
@@ -28,7 +28,7 @@ EasyAIFilter是由[EasyNVR](http://www.easynvr.com "www.easynvr.com")团队开�
 
 	Linux编译方法，
 		
-		cd libEasyAIFilter\libEasyAIFilter
+		cd libEasyAIFilter
 		mkdir build
 		cd build
 		cmake -DCMAKE_BUILD_TYPE=Release ..

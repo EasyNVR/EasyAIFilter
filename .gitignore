@@ -1,1 +1,4 @@
 /.vs/libEasyAIFilter/v14/.suo
+x64/
+libEasyAIFilter/build/
+libEasyAIFilter/x64/
